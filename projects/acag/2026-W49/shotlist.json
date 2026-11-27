@@ -1,0 +1,284 @@
+{
+  "project": "acag",
+  "week": "2026-W49",
+  "base_url": "https://acag-idop.onrender.com",
+  "cold_start_ms": 150000,
+  "shots": [
+    {
+      "id": "mon-01",
+      "post": "mon-thread",
+      "tweet": 1,
+      "mode": "screenshot",
+      "intent": "Chat opening \u2014 the stylist's own styles as cards. This is what niching bought you",
+      "viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Braids from Instagram"
+        },
+        {
+          "action": "wait",
+          "ms": 2500
+        }
+      ]
+    },
+    {
+      "id": "mon-02",
+      "post": "mon-just-the-thing",
+      "mode": "screenshot",
+      "intent": "Just the style cards, cropped tight",
+      "viewports": [
+        "desktop"
+      ],
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Locs I saved"
+        },
+        {
+          "action": "wait",
+          "ms": 2500
+        }
+      ],
+      "clip": "main"
+    },
+    {
+      "id": "tue-01",
+      "post": "tue-thread",
+      "tweet": 1,
+      "mode": "recording",
+      "intent": "Client sends a style photo; the assistant matches it, prices it and asks the follow-up question",
+      "viewports": [
+        "desktop"
+      ],
+      "duration_s": 26,
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Braids from Instagram"
+        },
+        {
+          "action": "wait",
+          "ms": 1500
+        },
+        {
+          "action": "click",
+          "selector": "button:has-text('Braids from Instagram')"
+        },
+        {
+          "action": "waitForText",
+          "text": "hrs"
+        },
+        {
+          "action": "wait",
+          "ms": 7000
+        }
+      ]
+    },
+    {
+      "id": "tue-02",
+      "post": "tue-thread",
+      "tweet": 4,
+      "mode": "screenshot",
+      "intent": "The matched style, the price and the question it asks back",
+      "viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Braids from Instagram"
+        },
+        {
+          "action": "wait",
+          "ms": 1200
+        },
+        {
+          "action": "click",
+          "selector": "button:has-text('Braids from Instagram')"
+        },
+        {
+          "action": "waitForText",
+          "text": "hrs"
+        },
+        {
+          "action": "wait",
+          "ms": 6000
+        },
+        {
+          "action": "scroll",
+          "to": "bottom"
+        }
+      ]
+    },
+    {
+      "id": "tue-03",
+      "post": "tue-just-the-thing",
+      "mode": "screenshot",
+      "intent": "Mobile \u2014 what the client actually sees in her hand",
+      "viewports": [
+        "mobile"
+      ],
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Cornrows for him"
+        },
+        {
+          "action": "wait",
+          "ms": 1200
+        },
+        {
+          "action": "click",
+          "selector": "button:has-text('Cornrows for him')"
+        },
+        {
+          "action": "waitForText",
+          "text": "hrs"
+        },
+        {
+          "action": "wait",
+          "ms": 6000
+        },
+        {
+          "action": "scroll",
+          "to": "bottom"
+        }
+      ]
+    },
+    {
+      "id": "thu-01",
+      "post": "thu-thread",
+      "tweet": 5,
+      "mode": "screenshot",
+      "intent": "A men's style matched and priced from the stylist's own list",
+      "viewports": [
+        "desktop"
+      ],
+      "path": "/s/crown-and-coil",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "A fade for him"
+        },
+        {
+          "action": "wait",
+          "ms": 1500
+        },
+        {
+          "action": "click",
+          "selector": "button:has-text('A fade for him')"
+        },
+        {
+          "action": "wait",
+          "ms": 24000
+        },
+        {
+          "action": "scroll",
+          "to": "bottom"
+        }
+      ]
+    },
+    {
+      "id": "sun-01",
+      "post": "sun-thread",
+      "tweet": 1,
+      "mode": "screenshot",
+      "intent": "Stylist dashboard, Bookings tab. NOTE: currently renders empty - the seeded bookings are in the past. Re-run `npm run db:seed` before using this shot",
+      "viewports": [
+        "desktop"
+      ],
+      "path": "/dashboard",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Enter the dashboard"
+        },
+        {
+          "action": "click",
+          "selector": "button:has-text('Enter the dashboard')"
+        },
+        {
+          "action": "waitForText",
+          "text": "Overview"
+        },
+        {
+          "action": "wait",
+          "ms": 2000
+        },
+        {
+          "action": "click",
+          "selector": "a:has-text('Bookings'), button:has-text('Bookings')"
+        },
+        {
+          "action": "wait",
+          "ms": 5000
+        }
+      ]
+    },
+    {
+      "id": "wed-01",
+      "post": "wed-thread",
+      "tweet": 1,
+      "mode": "manual",
+      "intent": "A haggle exchange \u2014 you lowball it and it refuses, then meets you partway",
+      "manual_reason": "the negotiation needs a real back-and-forth conversation; scripted turns give a flat, unconvincing exchange",
+      "manual_steps": [
+        "Open /s/crown-and-coil, ask for a price on any style",
+        "Offer something insultingly low, screenshot the refusal",
+        "Keep pushing until you get 'this is the lowest I can go'",
+        "Crop to just the exchange \u2014 the refusal is the point"
+      ]
+    },
+    {
+      "id": "fri-01",
+      "post": "fri-thread",
+      "tweet": 1,
+      "mode": "manual",
+      "intent": "The Devpost page showing the real submission deadline of 12 Nov",
+      "manual_reason": "needs your logged-in Devpost view, and the page must be the real one",
+      "manual_steps": [
+        "Screenshot the hackathon page with the deadline visible",
+        "Do not crop out the date \u2014 the date is the whole post"
+      ]
+    },
+    {
+      "id": "fri-02",
+      "post": "fri-just-the-thing",
+      "mode": "manual",
+      "intent": "git log showing the last commit on 6 Nov, six days before the deadline you missed",
+      "manual_reason": "your terminal",
+      "manual_steps": [
+        "Run: git log --pretty='%ad  %s' --date=short",
+        "Increase the font size first, dark theme"
+      ]
+    },
+    {
+      "id": "sun-02",
+      "post": "sun-just-the-thing",
+      "mode": "manual",
+      "intent": "git log --stat on the pivot commit \u2014 99 files, +3,260 / -1,684",
+      "manual_reason": "your terminal",
+      "manual_steps": [
+        "Run: git show --stat --oneline HEAD",
+        "The file count and the deletions are the point \u2014 make sure both are visible"
+      ]
+    },
+    {
+      "id": "sat-01",
+      "post": "sat-thread",
+      "mode": "manual",
+      "intent": "BLOCKED \u2014 depends on the real detail from your week, which I don't have yet",
+      "manual_reason": "the Saturday post isn't written; send me 3-4 lines about an actual day this week"
+    }
+  ]
+}

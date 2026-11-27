@@ -140,8 +140,8 @@ just break one reply, it quietly poisoned the context for every reply after it.
   clock had already almost run out.
 - **No users. No judging. No placement. No revenue.** Do not imply otherwise,
   ever. The only supportable claims are: he built it, it works, it's live.
-- **[PERMISSION PENDING]** Whether the missed-deadline story may be posted
-  publicly. Do not use it until he says yes.
+- **PERMISSION GRANTED 2026-11-27:** he approved posting the missed-deadline
+  story in full, dates included, as the Friday post.
 
 ## His take — 2026-11-27
 
@@ -162,14 +162,25 @@ three reasons, all of them):
 **Audience this week:** a mix. Threads aimed at founders, quick-value posts
 aimed at beginners.
 
+**Hardest part:** *no preference given* (2026-11-27). He did not single one out.
+So do not call any part "the hardest" or claim it nearly beat him. Describe what
+the code does, sourced from the repo, without attributing a feeling he never
+expressed.
+
+**Tired of hearing:** *no preference given* (2026-11-27). He has no strong view
+here right now. **Do not invent a contrarian take and put it in his mouth.** Thu
+must run on a position he has actually stated — the three pricing reasons above,
+or the stance in his own tweets that the tool isn't the problem, the prompting
+and the thinking are.
+
 ## Still needed from Joseph
 
 1. ~~Why the pivot?~~ ANSWERED 2026-11-27, see "The pivot" above.
 2. ~~Hackathon result.~~ ANSWERED 2026-11-27 — missed the deadline, see Results.
    Permission to post that story still pending.
-3. The hardest part — what took longest or nearly didn't work?
-4. A real detail from this week, for the Saturday post.
-7. What he is tired of hearing people say about AI/building.
+3. ~~Hardest part.~~ ASKED 2026-11-27 — no preference. Do not attribute one.
+4. **STILL NEEDED: a real detail from this week, for the Saturday post.**
+7. ~~Tired of hearing.~~ ASKED 2026-11-27 — no preference. Do not invent one.
 5. ~~Sample tweets.~~ DONE 2026-11-27 — 7 tweets captured in `voice.md`.
    Confirmed: sentence case, no hashtags ever, 🧵 is the only emoji he uses,
    @JosephBusayo9, 212 followers.
