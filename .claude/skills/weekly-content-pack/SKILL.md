@@ -57,7 +57,47 @@ Clone or read the repo. Build an evidence list before writing:
 Record every confirmed fact in `projects/<name>/facts.md` with its source
 (commit hash, file path, or "Joseph confirmed <date>"). Append, never rewrite.
 
-### 3. Draft
+### 3. His take — always ask, never skip
+
+**Never go from research straight to drafting.** The repo gives facts. It cannot
+give the opinion that makes a post worth reading, and an opinion invented on his
+behalf is the same offence as an invented number.
+
+So after research, stop and ask what he actually thinks. Ask it *informed* —
+questions built on what you just found in the repo, not a generic form. Bad:
+"What do you think about the project?" Good: "You let the server compute every
+price and kept the discount floor away from the model. Was that a trust thing, a
+cost thing, or did the model get it wrong once?"
+
+Ask 5-8 of these. Short enough to answer on a phone. Say up front that one-line
+answers are fine and "no strong view" is a real answer.
+
+Cover:
+
+1. **The opinion.** What does he actually believe about this project, or about
+   the way people build things like it? What would he argue with someone about?
+   This becomes the hooks.
+2. **The decision he'd defend.** One choice in the build he'd push back on if a
+   reviewer questioned it, and why.
+3. **What annoyed him.** The part that was tedious, stupid, or took far longer
+   than it should have.
+4. **What he'd tell a beginner** about this project in one sentence.
+5. **What he'd do differently** with another week.
+6. **Who he's hoping reads it** this week - founders, other devs, beginners? It
+   changes the register.
+7. **Anything he's tired of seeing** people say about this topic. Contrarian
+   takes are his strongest register - see `references/voice.md`.
+8. **The hardest part**, and **what broke**, if intake didn't already get them.
+
+Then play it back in 3-4 lines: *"So the angle this week is X, you'd argue Y, and
+the thing you're tired of is Z."* Let him correct it before drafting. A wrong
+angle wastes the whole pack.
+
+Append his answers to `projects/<name>/facts.md` under a dated **His take**
+heading, marked as his words. Opinions stay quotable and reusable, and it stops
+you asking the same thing next week.
+
+### 4. Draft
 
 21 posts: for each of Mon–Sun, one theme post (a 5–7 tweet thread by default,
 following that day's slot in the rotation), one "just the thing" caption, one
@@ -69,7 +109,7 @@ change one.
 
 Write each thread as numbered, ready-to-paste tweets. Mark where the shot goes.
 
-### 4. Shot list
+### 5. Shot list
 
 Write `shotlist.json` per `references/schema.md`. Every post that references a
 visual needs an entry. Be honest about `mode`:
@@ -81,7 +121,7 @@ visual needs an entry. Be honest about `mode`:
 
 Mask anything that leaks: test emails, tokens, internal ids.
 
-### 5. Deliver
+### 6. Deliver
 
 Write `pack.md`, `shotlist.json`, run the capture, commit. Then tell him in a few
 lines: what's in the pack, what the capture produced, what's in `MANUAL.md` for

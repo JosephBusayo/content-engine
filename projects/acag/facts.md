@@ -42,8 +42,13 @@ Append-only. Every line carries a source. Nothing here is inferred or assumed.
   — *source: Joseph's brief*
 - On 2026-11-06 it was narrowed to hair stylists specifically, rewriting 99 files.
   — *source: commit "Niche Acag to hair stylists"*
-- **[UNCONFIRMED] Why he pivoted.** The diff shows what changed, not why. Needs
-  Joseph. Do not post a reason until he gives one.
+- **Why he pivoted — CONFIRMED by Joseph, 2026-11-27, his words:** "I pivoted
+  because I wanted to niche, social seller is general in a sense so I wanted to
+  do something way more niche so that would help build more specific features."
+- The point worth making from that: narrowing the audience is what *unlocked*
+  the specific features. "Sellers" can't have length-in-inches pricing, a style
+  portfolio matcher or a per-weekday opening-hours diary. "Hair stylists" can.
+  The niche didn't shrink the product, it made it buildable.
 
 ## What broke (real, from the diff)
 
@@ -118,6 +123,10 @@ just break one reply, it quietly poisoned the context for every reply after it.
 
 - Render free tier sleeps. Measured cold start on 2026-11-27: **39.5 seconds** to
   first byte. — *source: curl timing*
+- Supabase free tier paused the database after ~21 days idle (last commit
+  2026-11-06). Every DB-backed route returned HTTP 500 while paused; the static
+  landing page still rendered. Joseph resumed it on 2026-11-27 and all routes
+  returned 200. — *source: measured directly, 2026-11-27*
 
 ## Results
 
@@ -127,8 +136,11 @@ just break one reply, it quietly poisoned the context for every reply after it.
 
 ## Still needed from Joseph
 
-1. Why the pivot from social-media sellers to hair stylists?
+1. ~~Why the pivot?~~ ANSWERED 2026-11-27, see "The pivot" above.
 2. Hackathon result, if any. If none, say so and the week leans on process.
 3. The hardest part — what took longest or nearly didn't work?
 4. A real detail from this week, for the Saturday post.
-5. 5–10 of his own tweets, for `references/voice.md`.
+5. ~~Sample tweets.~~ DONE 2026-11-27 — 7 tweets captured in `voice.md`.
+   Confirmed: sentence case, no hashtags ever, 🧵 is the only emoji he uses,
+   @JosephBusayo9, 212 followers.
+6. His take on the project (the step-3 interview) — not yet run.
