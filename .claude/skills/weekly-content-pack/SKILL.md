@@ -115,7 +115,9 @@ Write `shotlist.json` per `references/schema.md`. Every post that references a
 visual needs an entry. Be honest about `mode`:
 
 - `screenshot` — a page state the script can reach by clicking and typing
-- `recording` — a short flow, 8–15s, that reads clearly at phone size
+- `recording` — a short flow, 8–15s, **landscape/desktop**. Portrait recordings
+  of a web app read badly on X. Only use `mobile` for a recording when the post
+  is specifically about how it behaves on a phone
 - `manual` — needs his terminal, real money, a real DM inbox, or a third-party
   login that blocks automation. Give a one-line instruction, not an apology.
 

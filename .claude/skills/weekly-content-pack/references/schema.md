@@ -55,13 +55,14 @@ know the login worked.
 | `tweet` | no | which tweet in the thread carries it |
 | `mode` | yes | `screenshot` \| `recording` \| `manual` |
 | `intent` | yes | one line, plain English — what should be visible. This is what Joseph reads |
-| `viewports` | no | subset of the viewport names. Default both |
+| `viewports` | no | subset of the viewport names. Screenshots default to both; **recordings default to `desktop` only** |
 | `path` | for screenshot/recording | path appended to `base_url` |
 | `steps` | no | actions to reach the state |
 | `clip` | no | selector to crop to. Use it; full pages make weak tweets |
 | `mask` | no | selectors blanked before capture — test emails, tokens, ids |
 | `full_page` | no | default false |
 | `duration_s` | recording | 8–15. Longer than 20 doesn't get watched |
+| | | **Record landscape.** A portrait recording of a web app reads badly on X. Only override to `mobile` when the post is specifically about the mobile experience |
 | `manual_reason` | manual | why the script can't do it, in one line |
 | `manual_steps` | manual | what Joseph should record, as a short list |
 

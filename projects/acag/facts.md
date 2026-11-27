@@ -130,16 +130,46 @@ just break one reply, it quietly poisoned the context for every reply after it.
 
 ## Results
 
-- **[UNCONFIRMED]** Hackathon outcome — submitted? judged? placed? Any real users
-  at all? Joseph has not said. **Post no number, no placement and no user count
-  until he does.** "Built for a hackathon" is the only claim currently supported.
+- **He never submitted it. He missed the deadline.** CONFIRMED by Joseph
+  2026-11-27, his words: *"Didn't meet the submission deadline. More like I
+  thought the submission date was 15th but it turns out it was 12th and I only
+  found this out on 16th 😅😂"*
+- So: the deadline was **12 Nov**. He believed it was the **15th**. He found out
+  on the **16th**, four days after it had closed. His last commit is **6 Nov** —
+  six days before the real deadline, he had a working product and no idea the
+  clock had already almost run out.
+- **No users. No judging. No placement. No revenue.** Do not imply otherwise,
+  ever. The only supportable claims are: he built it, it works, it's live.
+- **[PERMISSION PENDING]** Whether the missed-deadline story may be posted
+  publicly. Do not use it until he says yes.
+
+## His take — 2026-11-27
+
+**Why the server owns pricing and the model never sees the floor** (he picked
+three reasons, all of them):
+
+1. He doesn't trust a language model with money. It shouldn't be the thing
+   deciding what a customer pays.
+2. **It leaks.** Anything in the prompt or in the browser can be pulled out by
+   the customer, and the stylist's lowest acceptable price is exactly the thing
+   that must never leak.
+3. Cost and reliability — cheaper and more predictable to do arithmetic in code
+   than to spend tokens on maths the model does unreliably.
+
+**What annoyed him most:** rewriting 99 files to pivot. The 6 Nov niching commit,
++3,260 / -1,684 — redoing work he had already done.
+
+**Audience this week:** a mix. Threads aimed at founders, quick-value posts
+aimed at beginners.
 
 ## Still needed from Joseph
 
 1. ~~Why the pivot?~~ ANSWERED 2026-11-27, see "The pivot" above.
-2. Hackathon result, if any. If none, say so and the week leans on process.
+2. ~~Hackathon result.~~ ANSWERED 2026-11-27 — missed the deadline, see Results.
+   Permission to post that story still pending.
 3. The hardest part — what took longest or nearly didn't work?
 4. A real detail from this week, for the Saturday post.
+7. What he is tired of hearing people say about AI/building.
 5. ~~Sample tweets.~~ DONE 2026-11-27 — 7 tweets captured in `voice.md`.
    Confirmed: sentence case, no hashtags ever, 🧵 is the only emoji he uses,
    @JosephBusayo9, 212 followers.

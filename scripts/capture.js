@@ -212,9 +212,16 @@ async function recording(browser, shot, vpName) {
   const vw = opts.viewport?.width ?? 1280;
   const vh = opts.viewport?.height ?? 720;
   const even = (n) => Math.round(n / 2) * 2;
+  // Upscale small viewports so phone-sized recordings aren't soft, but cap the
+  // long edge at 1440 — recording a 2880px desktop just burns CPU, and ffmpeg
+  // scales down to 1280 for X anyway.
+  const factor = Math.min(2, 1440 / Math.max(vw, vh));
   const ctx = await browser.newContext({
     ...opts,
-    recordVideo: { dir: raw, size: { width: even(vw * 2), height: even(vh * 2) } },
+    recordVideo: {
+      dir: raw,
+      size: { width: even(vw * factor), height: even(vh * factor) },
+    },
   });
   let videoPath;
   try {
@@ -281,7 +288,8 @@ function writeManual(manualShots, filtered) {
     manualPath,
     `# Manual shots — ${list.project} ${list.week}\n\n` +
       `${manualShots.length} shot(s) need you. Everything else is in \`shots/\`.\n\n` +
-      `For phone recordings: portrait, 1080p, under 20s. For terminal: increase the font size first.\n\n---\n\n${body}\n`,
+      `Record landscape, 1280x720 or wider, under 20s. For terminal shots: increase the font size first.\n` +
+      `Made a clip already? \`scripts/to-mp4.cmd myclip.mov\` converts it to an X-ready MP4.\n\n---\n\n${body}\n`,
   );
   log(`\nwrote ${path.relative(process.cwd(), manualPath)} (${manualShots.length} shot(s) for you)`);
 }
@@ -304,7 +312,13 @@ function writeManual(manualShots, filtered) {
     try {
       await warmUp(browser);
       for (const shot of autoShots) {
-        const vps = shot.viewports?.length ? shot.viewports : Object.keys(viewports);
+        // Recordings default to landscape/desktop — portrait screen recordings of a
+        // web app read badly on X. Screenshots still do both viewports.
+        const vps = shot.viewports?.length
+          ? shot.viewports
+          : shot.mode === "recording"
+            ? ["desktop"]
+            : Object.keys(viewports);
         log(`${shot.id} [${shot.mode}] ${shot.intent}`);
         for (const vp of vps) {
           try {

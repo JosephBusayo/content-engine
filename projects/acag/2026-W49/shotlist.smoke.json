@@ -42,9 +42,9 @@
       "id": "smoke-03",
       "post": "pipeline-test",
       "mode": "recording",
-      "intent": "8s scroll through the landing page",
+      "intent": "8s scroll through the landing page, landscape",
       "viewports": [
-        "mobile"
+        "desktop"
       ],
       "path": "/",
       "duration_s": 8,
