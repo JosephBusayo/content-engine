@@ -1,0 +1,82 @@
+{
+  "project": "acag",
+  "week": "2026-W49",
+  "base_url": "https://acag-idop.onrender.com",
+  "cold_start_ms": 120000,
+  "shots": [
+    {
+      "id": "smoke-01",
+      "post": "pipeline-test",
+      "mode": "screenshot",
+      "intent": "Landing page hero \u2014 what Acag is, in one screen",
+      "viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "path": "/",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "AI booking assistant"
+        }
+      ]
+    },
+    {
+      "id": "smoke-02",
+      "post": "pipeline-test",
+      "mode": "screenshot",
+      "intent": "The three steps strip, cropped",
+      "viewports": [
+        "desktop"
+      ],
+      "path": "/",
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "Send the look"
+        }
+      ],
+      "clip": "ol.grid"
+    },
+    {
+      "id": "smoke-03",
+      "post": "pipeline-test",
+      "mode": "recording",
+      "intent": "8s scroll through the landing page",
+      "viewports": [
+        "mobile"
+      ],
+      "path": "/",
+      "duration_s": 8,
+      "steps": [
+        {
+          "action": "waitForText",
+          "text": "AI booking assistant"
+        },
+        {
+          "action": "wait",
+          "ms": 1200
+        },
+        {
+          "action": "scroll",
+          "to": "bottom"
+        },
+        {
+          "action": "wait",
+          "ms": 2500
+        }
+      ]
+    },
+    {
+      "id": "smoke-04",
+      "post": "pipeline-test",
+      "mode": "manual",
+      "intent": "Your terminal: Claude Code writing the negotiation floor logic",
+      "manual_reason": "needs your local terminal \u2014 the script can't capture your machine",
+      "manual_steps": [
+        "Increase terminal font size first",
+        "Dark theme, no personal paths visible"
+      ]
+    }
+  ]
+}
