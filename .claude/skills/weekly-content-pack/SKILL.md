@@ -1,6 +1,6 @@
 ---
 name: weekly-content-pack
-description: Generate Joseph's weekly Twitter/X content pack — 7 threads, 7 "just the thing" captions, 7 quick-value posts, plus a shot list for automated capture. Use when Joseph asks for the week's content, a content pack, or posts for a project. Takes a repo and/or live URL plus his story bits.
+description: Generate Joseph's weekly Twitter/X content pack — 21 single tweets (a theme post, a "just the thing" caption and a quick-value post for each day), plus spares and a shot list for automated capture. Use when Joseph asks for the week's content, a content pack, or posts for a project. Takes a repo and/or live URL plus his story bits.
 ---
 
 # Weekly content pack
@@ -99,15 +99,31 @@ you asking the same thing next week.
 
 ### 4. Draft
 
-21 posts: for each of Mon–Sun, one theme post (a 5–7 tweet thread by default,
-following that day's slot in the rotation), one "just the thing" caption, one
-quick-value post.
+21 posts: for each of Mon–Sun, one theme post (following that day's slot in the
+rotation), one "just the thing" caption, one quick-value post.
 
-Spread the project across the week so the days don't repeat each other. Each
-thread needs its own angle — if Tuesday and Wednesday would make the same point,
-change one.
+**Every post is a SINGLE TWEET. Two at the absolute most.** No threads. The
+account is small and has no premium, so 280 characters is a hard limit and
+nobody opens a thread from someone they don't follow. See
+`references/frameworks.md`.
 
-Write each thread as numbered, ready-to-paste tweets. Mark where the shot goes.
+Put each tweet in its own ```text fenced block so he can copy it straight out on
+a phone, and so the checker can read it.
+
+Then **verify, don't estimate**:
+
+    node scripts/check-length.js projects/<name>/<week>/pack.md
+
+It counts the way X does (a link is 23 characters whatever its length) and exits
+non-zero if anything is over. Fix and re-run until it passes. Never hand over a
+pack you haven't run it on.
+
+Spread the project across the week so days don't repeat each other. If Tuesday
+and Wednesday would make the same point, change one.
+
+**Add a SPARES section.** He posts several times a day, which burns a week fast.
+Six or seven extra tweets, same rules, drawn from facts that didn't make the
+main seven.
 
 ### 5. Shot list
 

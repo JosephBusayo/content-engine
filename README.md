@@ -39,7 +39,8 @@ can't honestly capture — your terminal, real money, your actual DMs — is wri
     .claude/skills/weekly-content-pack/   the skill
     scripts/                              capture pipeline
     projects/<name>/facts.md              confirmed story bits, append-only
-    projects/<name>/<week>/pack.md        the 21 posts
+    projects/<name>/<week>/pack.md        the 21 posts + spares
+    scripts/check-length.js               verify every tweet fits 280
     projects/<name>/<week>/shotlist.json  what to capture
     projects/<name>/<week>/shots/         captured png + mp4
     projects/<name>/<week>/MANUAL.md      shots you record yourself
